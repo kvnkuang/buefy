@@ -129,6 +129,7 @@
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
   },
+  "prepare": "npm run build:lib",
   "browserslist": [
     "> 1%",
     "last 2 versions",
