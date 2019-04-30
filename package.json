@@ -35,7 +35,8 @@
     "build:lib": "node build/build-lib.js",
     "build:docs": "node build/build.js",
     "build": "npm run build:lib && npm run build:docs",
-    "cov": "./node_modules/codcov/bin/codcov"
+    "cov": "./node_modules/codcov/bin/codcov",
+    "prepare": "npm run build:lib"
   },
   "keywords": [
     "bulma",
@@ -129,7 +130,6 @@
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
   },
-  "prepare": "npm run build:lib",
   "browserslist": [
     "> 1%",
     "last 2 versions",
