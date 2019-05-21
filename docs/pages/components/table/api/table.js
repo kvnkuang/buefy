@@ -116,7 +116,7 @@ export default [
             },
             {
                 name: '<code>current-page</code>',
-                description: `Current page of table data (if <code>paginated</code>)`,
+                description: `Current page of table data (if <code>paginated</code>), use the <code>.sync</code> modifier to make it two-way binding`,
                 type: 'Number',
                 values: '—',
                 default: '<code>1</code>'
@@ -171,14 +171,14 @@ export default [
                 default: '<code>false</code>'
             },
             {
-                name: '<code>customDetailRow</code>',
+                name: '<code>custom-detail-row</code>',
                 description: 'Allow a custom detail row',
                 type: 'Boolean',
                 values: '—',
                 default: '<code>false</code>'
             },
             {
-                name: '<code>showDetailIcon</code>',
+                name: '<code>show-detail-icon</code>',
                 description: 'Allow chevron icon and column to be visible',
                 type: 'Boolean',
                 values: '—',

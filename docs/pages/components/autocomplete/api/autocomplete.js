@@ -24,7 +24,7 @@ export default [
             },
             {
                 name: '<code>custom-formatter</code>',
-                description: 'Function to format date to a string for display in the input as alternative to <code>field</code> prop)',
+                description: 'Function to format an option to a string for display in the input as alternative to <code>field</code> prop)',
                 type: 'Function',
                 values: '—',
                 default: ''
@@ -114,6 +114,11 @@ export default [
             {
                 name: '<code>header</code>',
                 description: 'Show a custom header as first option',
+                props: '—'
+            },
+            {
+                name: '<code>footer</code>',
+                description: 'Show a custom footer as last option',
                 props: '—'
             }
         ],
