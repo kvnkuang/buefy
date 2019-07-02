@@ -1,5 +1,26 @@
 # Buefy Changelog
 
+## 0.7.8
+
+### New features
+
+* **New component: Steps**, [see docs](https://buefy.org/documentation/steps) (thanks @service-paradis)
+* Add ``label-position`` prop to field
+* Add ``full-screen`` prop to modal
+* Add ``enable-seconds`` prop to timepicker
+* Add ``years-range``, ``nearby-month-days``, ``nearby-selectable-month-days`` prop to datepicker
+
+### Fixes
+
+* Fix timepicker and clockpicker force new Date object on ``input`` event
+* Fix #1450 clockpicker rounded style (thanks @atinybeardedman)
+* Fix #1455 margins to taginput (thanks @francoism90)
+* Fix #1460 long press click on plus/minus buttons to numberinput
+* Fix #1462 table column width when a column is toggled invisible and visible again (thanks @service-paradis)
+* Fix #1469 ``use-html5-validation`` prop to numberinput
+* Fix #1470 override ``label-weight`` Bulma variable
+* Fix #1480 cancelling long press on Chromium (thanks @yxngl)
+
 ## 0.7.7
 
 ### New features

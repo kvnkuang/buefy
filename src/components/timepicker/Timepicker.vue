@@ -21,6 +21,7 @@
                 :readonly="!editable"
                 :rounded="rounded"
                 v-bind="$attrs"
+                :use-html5-validation="useHtml5Validation"
                 @keyup.native.enter="toggle(true)"
                 @change.native="onChange($event.target.value)"
                 @focus="handleOnFocus"
@@ -55,6 +56,22 @@
                             {{ minute.label }}
                         </option>
                     </b-select>
+                    <template v-if="enableSeconds">
+                        <span class="control is-colon">:</span>
+                        <b-select
+                            v-model="secondsSelected"
+                            @change.native="onSecondsChange($event.target.value)"
+                            :disabled="disabled"
+                            placeholder="00">
+                            <option
+                                v-for="second in seconds"
+                                :value="second.value"
+                                :key="second.value"
+                                :disabled="isSecondDisabled(second.value)">
+                                {{ second.label }}
+                            </option>
+                        </b-select>
+                    </template>
                     <b-select
                         v-model="meridienSelected"
                         @change.native="onMeridienChange($event.target.value)"
@@ -93,6 +110,7 @@
             :disabled="disabled"
             :readonly="false"
             v-bind="$attrs"
+            :use-html5-validation="useHtml5Validation"
             @change.native="onChange($event.target.value)"
             @focus="handleOnFocus"
             @blur="onBlur() && checkHtml5Validity()"/>

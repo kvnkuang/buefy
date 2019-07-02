@@ -16,6 +16,7 @@
                 :disabled="disabled"
                 :ellipsis="ellipsis"
                 :closable="closable"
+                :title="ellipsis && getNormalizedTagText(tag)"
                 @close="removeTag(index)">
                 {{ getNormalizedTagText(tag) }}
             </b-tag>
@@ -36,6 +37,7 @@
                 :loading="loading"
                 :autocomplete="nativeAutocomplete"
                 :keep-first="!allowNew"
+                :use-html5-validation="useHtml5Validation"
                 @typing="onTyping"
                 @focus="onFocus"
                 @blur="customOnBlur"
@@ -54,6 +56,9 @@
                 </template>
                 <template :slot="emptySlotName">
                     <slot name="empty" />
+                </template>
+                <template :slot="footerSlotName">
+                    <slot name="footer" />
                 </template>
             </b-autocomplete>
         </div>
@@ -177,6 +182,10 @@
                 return this.hasHeaderSlot ? 'header' : 'dontrender'
             },
 
+            footerSlotName() {
+                return this.hasHeaderSlot ? 'footer' : 'dontrender'
+            },
+
             hasDefaultSlot() {
                 return !!this.$scopedSlots.default
             },
@@ -187,6 +196,10 @@
 
             hasHeaderSlot() {
                 return !!this.$slots.header
+            },
+
+            hasFooterSlot() {
+                return !!this.$slots.footer
             },
 
             /**
