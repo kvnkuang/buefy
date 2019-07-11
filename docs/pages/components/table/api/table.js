@@ -80,6 +80,13 @@ export default [
                 default: '<code>false</code>'
             },
             {
+                name: '<code>checkbox-position</code>',
+                description: 'Position of the checkbox (if <code>checkable</code> is true)',
+                type: 'String',
+                values: '<code>left</code> or <code>right</code>',
+                default: '<code>left</code>'
+            },
+            {
                 name: '<code>checked-rows</code>',
                 description: 'Set which rows are checked, use the <code>.sync</code> modifier to make it two-way binding',
                 type: 'Array<Object>',
@@ -155,6 +162,13 @@ export default [
                 type: 'String',
                 values: '<code>is-small</code>, <code>is-medium</code>, <code>is-large</code>',
                 default: '—'
+            },
+            {
+                name: '<code>pagination-position</code>',
+                description: 'Pagination position (if <code>paginated</code>)',
+                type: 'String',
+                values: '<code>bottom</code>, <code>top</code>, <code>both</code>',
+                default: '<code>bottom</code>'
             },
             {
                 name: '<code>per-page</code>',
@@ -312,9 +326,14 @@ export default [
             },
             {
                 name: '<code>bottom-left</code>',
-                description: 'Custom bottom-left (opposite side of pagination)',
+                description: 'Custom bottom-left (opposite side of bottom pagination)',
                 props: '—'
-            }
+            },
+            {
+                name: '<code>top-left</code>',
+                description: 'Custom top-left (opposite side of top pagination)',
+                props: '—'
+            },
         ],
         events: [
             {

@@ -1,5 +1,29 @@
 # Buefy Changelog
 
+## 0.7.10
+
+* Fix #1536 build error using Sass customization
+* Fix menu component example on codepen and/or simple html page
+
+## 0.7.9
+
+### New features
+
+* **New component: Menu**, [see docs](https://buefy.org/documentation/menu)
+* Add ``custom-class`` prop to modal (thanks @CobraClutch)
+* Add ``delay`` prop to tooltip (thanks @service-paradis)
+* Add ``checkbox-position`` prop to table (thanks @service-paradis)
+* Add ``pagination-position`` prop to table (thanks @service-paradis)
+
+### Fixes
+
+* Fix build errors using typescript and return type of snackbar and notification
+* Fix upload on iOS
+* Fix native timepicker when ``enable-seconds``
+* Fix #1515 toggle datepicker programmatically
+* Fix #1516 month picker on iOS
+* Fix #1526 timepicker default parser
+
 ## 0.7.8
 
 ### New features

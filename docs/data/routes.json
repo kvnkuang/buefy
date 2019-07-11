@@ -231,8 +231,7 @@
             "/",
             "documentation",
             "documentation/field"
-        ],
-        "isUpdated": true
+        ]
     },
     "documentation/input": {
         "title": "Input",
@@ -366,7 +365,8 @@
             "/",
             "documentation",
             "documentation/upload"
-        ]
+        ],
+        "isUpdated": true
     },
     "documentation/table": {
         "title": "Table",
@@ -378,7 +378,8 @@
             "/",
             "documentation",
             "documentation/table"
-        ]
+        ],
+        "isUpdated": true
     },
     "documentation/pagination": {
         "title": "Pagination",
@@ -426,6 +427,18 @@
             "/",
             "documentation",
             "documentation/steps"
+        ]
+    },
+    "documentation/menu": {
+        "title": "Menu",
+        "subtitle": "A simple vertical menu",
+        "path": "/documentation/menu",
+        "githubPath": "pages/components/menu/Menu.vue",
+        "menu": "documentation",
+        "breadcrumb": [
+            "/",
+            "documentation",
+            "documentation/menu"
         ],
         "isNew": true
     },

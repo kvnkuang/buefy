@@ -98,6 +98,7 @@
             v-else
             ref="input"
             type="time"
+            :step="nativeStep"
             autocomplete="off"
             :value="formatHHMMSS(computedValue)"
             :placeholder="placeholder"
@@ -118,30 +119,35 @@
 </template>
 
 <script>
-    import TimepickerMixin from '../../utils/TimepickerMixin'
-    import Dropdown from '../dropdown/Dropdown'
-    import DropdownItem from '../dropdown/DropdownItem'
-    import Input from '../input/Input'
-    import Field from '../field/Field'
-    import Select from '../select/Select'
-    import Icon from '../icon/Icon'
+import TimepickerMixin from '../../utils/TimepickerMixin'
+import Dropdown from '../dropdown/Dropdown'
+import DropdownItem from '../dropdown/DropdownItem'
+import Input from '../input/Input'
+import Field from '../field/Field'
+import Select from '../select/Select'
+import Icon from '../icon/Icon'
 
-    export default {
-        name: 'BTimepicker',
-        components: {
-            [Input.name]: Input,
-            [Field.name]: Field,
-            [Select.name]: Select,
-            [Icon.name]: Icon,
-            [Dropdown.name]: Dropdown,
-            [DropdownItem.name]: DropdownItem
-        },
-        mixins: [TimepickerMixin],
-        inheritAttrs: false,
-        data() {
-            return {
-                _isTimepicker: true
-            }
+export default {
+    name: 'BTimepicker',
+    components: {
+        [Input.name]: Input,
+        [Field.name]: Field,
+        [Select.name]: Select,
+        [Icon.name]: Icon,
+        [Dropdown.name]: Dropdown,
+        [DropdownItem.name]: DropdownItem
+    },
+    mixins: [TimepickerMixin],
+    inheritAttrs: false,
+    data() {
+        return {
+            _isTimepicker: true
+        }
+    },
+    computed: {
+        nativeStep() {
+            if (this.enableSeconds) return '1'
         }
     }
+}
 </script>
